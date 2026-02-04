@@ -1,0 +1,163 @@
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("heart-bg.png");
+  background-size: cover;
+  background-position: center;
+  font-family: "Sour Gummy", sans-serif;
+}
+
+
+/* =====================
+   ENVELOPE
+===================== */
+#envelope-container {
+  text-align: center;
+  cursor: pointer;
+
+  transform: translateY(-30px); /* ⬆️ remonte l’ensemble */
+}
+
+#envelope {
+  width: 900px;
+  animation: pulse 1.5s infinite;
+}
+
+#envelope-container p {
+  font-size: 32px;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+
+/* =====================
+   LETTER WINDOW
+===================== */
+#letter-container {
+  display: none;
+  position: fixed;
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.letter-window {
+  width: 800vw;
+  position: relative;
+  max-width: 1000px;
+  aspect-ratio: 3 / 2;
+  background-image: url("window.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+
+  transform: scale(1.15);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.letter-window.open {
+  transform: scale(1);
+  opacity: 1;
+}
+
+h1 {
+  font-size: 25px;
+  margin: 0;
+
+  position: absolute;      /* ⬅️ sort du flux */
+  top: 440px;              /* ⬇️ descend le titre */
+  left: 250px;             /* ⬅️ décale à gauche */
+
+  font-weight: 700;
+}
+
+/* =====================
+   POUSSIN
+===================== */
+.poussin {
+  width: 450px;
+  position: absolute;
+  top: 210px;
+  left: 200px;
+  transition: transform 0.4s ease;
+}
+
+.letter-window.final .poussin {
+  width: 450px;
+  position: absolute;
+  top: 220px;          /* ⬆️ NOUVEL emplacement vertical */
+  left: 190px;         /* ⬅️ NOUVEL emplacement horizontal */
+
+  animation: bounce 0.6s infinite;
+  transform: scale(0.95);
+}
+
+@keyframes bounce {
+  0% { transform: scale(0.9); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.letter-window.final h1 {
+  top: 450px;     /* ⬇️ NOUVEL emplacement vertical */
+  left: 260px;    /* ⬅️ NOUVEL emplacement horizontal */
+}
+
+/* =====================
+   BUTTONS
+===================== */
+.buttons {
+  position: absolute;   /* ⬅️ sort du flux */
+  top: 470px;           /* ⬇️ descend les boutons */
+  left: 40%;            /* centre horizontalement */
+  transform: translateX(-50%);
+
+  display: flex;
+  gap: 20px;
+}
+
+.btn {
+  width: 180px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.no-btn {
+  position: relative;
+}
+
+/* =====================
+   FINAL TEXT
+===================== */
+.final-text {
+  position: absolute;      /* ⬅️ sort du flux */
+  top: 470px;              /* ⬇️ position verticale */
+  left: 403px;               /* centre horizontal */
+  transform: translateX(-50%);
+  
+  font-size: 24px;
+  background: rgba(255, 220, 220, 0.6);
+  padding: 10px 22px;
+  border-radius: 18px;
+}
+s
+.final-title {
+  font-family: "Sour Gummy", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: 1px;
+}

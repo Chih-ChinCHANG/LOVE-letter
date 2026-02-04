@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Letter to my Curly 💌</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- ENVELOPE SCREEN -->
+    <div id="envelope-container">
+      <img src="envelope.png" alt="Envelope" id="envelope" />
+      <p>
+        A LOVE Letter to my Curly 💌<br>
+        - By Poulette 💛
+      </p>
+    </div>
+
+    <!-- LETTER SCREEN -->
+    <div id="letter-container">
+      <div class="letter-window">
+        <h1 id="letter-title">Will you be my Valentine?</h1>
+
+        <!-- poussin-ask = état question -->
+        <img
+          src="poussin-ask.png"
+          class="poussin"
+          id="letter-poussin"
+          alt="Poussin"
+        />
+
+        <div class="buttons" id="letter-buttons">
+          <!-- YES -->
+          <img
+            src="yes.png"
+            class="btn yes-btn"
+            alt="Cui Coui"
+          />
+
+          <!-- NO -->
+          <div class="no-wrapper">
+            <img
+              src="no.png"
+              class="btn no-btn"
+              alt="Je piou pas"
+            />
+          </div>
+        </div>
+
+        <p id="final-text" class="final-text" style="display: none">
+          🐥💛 Je t'aime mon Poulet 💛🐥
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
